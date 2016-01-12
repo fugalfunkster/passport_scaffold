@@ -28,6 +28,8 @@ app.use(bodyParser()); // get information from html forms
 
 app.set('view engine', 'ejs'); // set up ejs for templating
 
+app.use('/views', express.static(process.cwd() + '/views')); // direct client routes
+
 // For Passport
 app.use(session({
     secret:'getOutTheVote',

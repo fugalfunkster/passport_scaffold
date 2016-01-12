@@ -1,30 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="/views/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
 <body>
 
     <a href="/signup">
-        <button>Signup</button>
+        <button class="link">Signup</button>
     </a>
 
     <!-- show any messages that come back with authentication -->
     <% if (message.length > 0) { %>
-        <div class="alert alert-danger"><%= message %></div>
+        <div class="error"><%= message %></div>
     <% } %>
 
     <!-- LOGIN FORM -->
     <form action="/login" method="post">
-        <div class="form-group">
+        <div class="">
             <label>Email</label>
-            <input type="text" class="form-control" name="email">
+            <input type="text" class="" name="email">
         </div>
-        <div class="form-group">
+        <div class="">
             <label>Password</label>
-            <input type="password" class="form-control" name="password">
+            <input type="password" class="" name="password">
         </div>
 
-        <button type="submit" class="btn btn-warning btn-lg">Login</button>
+        <button type="submit" class="form">Login</button>
     </form>
 
     <a href="/oauth/github">
-        <button>LOGIN WITH GITHUB</button>
+        <button id="github">LOGIN WITH GITHUB</button>
     </a>
     
 </body>
+</html>
