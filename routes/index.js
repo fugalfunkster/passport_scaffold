@@ -8,7 +8,7 @@ module.exports = function (app, passport) {
         if (req.isAuthenticated()) {
             return next();
         } else {
-            res.redirect('/signup');
+            res.redirect('/login');
         }
     }
     
