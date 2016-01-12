@@ -1,5 +1,9 @@
 <body>
 
+    <a href="/signup">
+        <button>Signup</button>
+    </a>
+
     <!-- show any messages that come back with authentication -->
     <% if (message.length > 0) { %>
         <div class="alert alert-danger"><%= message %></div>
@@ -19,11 +23,8 @@
         <button type="submit" class="btn btn-warning btn-lg">Login</button>
     </form>
 
-
     <a href="/oauth/github">
-        <button>
-            <p>LOGIN WITH GITHUB</p>
-        </button>
+        <button>LOGIN WITH GITHUB</button>
     </a>
     
 </body>
