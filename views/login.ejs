@@ -10,29 +10,24 @@
     <a href="/signup">
         <button class="link">Signup</button>
     </a>
+        <!-- show any messages that come back with authentication -->
+        <% if (message.length > 0) { %>
+            <div class="error"><%= message %></div>
+        <% } %>
+    
+        <!-- LOGIN FORM -->
+        <form class="auth" action="/login" method="post">
+            <div class="inputs">
+                <input type="text" class="" name="email" placeholder="Email">
+                <br/>
+                <input type="password" class="" name="password" placeholder="Password">
+            </div>
+    
+            <button type="submit" class="submit">Login</button>
 
-    <!-- show any messages that come back with authentication -->
-    <% if (message.length > 0) { %>
-        <div class="error"><%= message %></div>
-    <% } %>
-
-    <!-- LOGIN FORM -->
-    <form action="/login" method="post">
-        <div class="">
-            <label>Email</label>
-            <input type="text" class="" name="email">
-        </div>
-        <div class="">
-            <label>Password</label>
-            <input type="password" class="" name="password">
-        </div>
-
-        <button type="submit" class="form">Login</button>
-    </form>
-
-    <a href="/oauth/github">
-        <button id="github">LOGIN WITH GITHUB</button>
-    </a>
+        </form>
+    
+        <div id="github"><img src="/views/img/github_32px.png"/><a href="/oauth/github">Github</a></div>
     
 </body>
 </html>

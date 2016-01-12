@@ -1,3 +1,60 @@
 body {
-    background-color: lightblue;
+    background-color: cornsilk;
+}
+
+.auth {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+}
+
+input {
+    border: solid gray 2px;
+    font-size: 1.6em;
+    padding: 10px;
+}
+
+.inputs {
+    width: 100%;
+}
+
+input:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: none;
+}
+
+input:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.submit, .link {
+    border: solid gray 2px;
+    font-size: 1.4em;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+    height: 55px;
+    width: 110px;
+    margin: 10px auto 0px auto;
+    cursor: pointer;
+}
+
+#github {
+    display: inline-block;
+    border: solid gray 2px;
+    font-size: 1.4em;
+    padding: 5px;
+    background-color: gray;
+    border-radius: 5px;
+    width: 140px;
+    margin: 10px auto 0px auto;
+    cursor: pointer;
+}
+
+#github>a {
+    color: black;
+    text-decoration: none;
+    vertical-align: middle;
 }
