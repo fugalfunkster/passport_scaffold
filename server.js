@@ -21,7 +21,7 @@ mongoose.connect(process.env.MONGO_URI);
 // Configure Passport
 require('./config/passport.js')(passport); // pass passport for configuration
 
-// set up our express application
+// Set up Express app
 app.use(morgan('dev')); // log every request to the console
 app.use(cookieParser()); // read cookies (needed for auth / session)
 app.use(bodyParser()); // get information from html forms
