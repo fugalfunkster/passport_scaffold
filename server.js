@@ -1,15 +1,17 @@
+/* jslint node: true */
+
 'use strict';
 
-var express = require('express'),
-    app = express(),
-    routes = require('./routes/index.js'),
-    mongoose = require('mongoose'),
-    passport = require('passport'),
-    flash = require('connect-flash'),
-    morgan = require('morgan'),
-    cookieParser = require('cookie-parser'),
-    bodyParser = require('body-parser'),
-    session = require('express-session');
+var express = require('express');
+var app = express();
+var routes = require('./routes/index.js');
+var mongoose = require('mongoose');
+var passport = require('passport');
+var flash = require('connect-flash');
+var morgan = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var session = require('express-session');
 
 // Require our configs from .env
 require('dotenv').load();
@@ -32,18 +34,18 @@ app.use('/views', express.static(process.cwd() + '/views')); // direct client ro
 
 // For Passport
 app.use(session({
-    secret:'getOutTheVote',
-    resave: false,
-    saveUninitialized: false
+  secret: 'getOutTheVote',
+  resave: false,
+  saveUninitialized: false
 }));
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(flash()); 
+app.use(flash());
 
 // Routes
 routes(app, passport);
 
-// Launch 
-app.listen(port, function () {
-    console.log('Listening on port ' + port + '...');
+// Launch
+app.listen(port, function() {
+  console.log('Listening on port ' + port + '...');
 });
