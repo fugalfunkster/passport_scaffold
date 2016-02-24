@@ -21,7 +21,8 @@ var port = process.env.PORT || 8080;
 mongoose.connect(process.env.MONGO_URI);
 
 // Configure Passport
-require('./config/passport.js')(passport); // pass passport for configuration
+require('./config/passport.js')(passport);
+// pass passport for configuration
 
 // Set up Express app
 app.use(morgan('dev')); // log every request to the console
@@ -30,7 +31,8 @@ app.use(bodyParser()); // get information from html forms
 
 app.set('view engine', 'ejs'); // set up ejs for templating
 
-app.use('/views', express.static(process.cwd() + '/views')); // direct client routes
+app.use('/views', express.static(process.cwd() + '/views'));
+// direct client routes
 
 // For Passport
 app.use(session({

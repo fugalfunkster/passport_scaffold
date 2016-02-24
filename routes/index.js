@@ -46,7 +46,8 @@ module.exports = function(app, passport) {
 
   app.route('/profile')
     .get(isLoggedIn, function(req, res) {
-      res.sendFile(path + '/views/profile.html');
+      console.log(req.user);
+      res.render('profile.ejs', {user: req.user.local.email} );
     });
 
   app.route('/oauth/github')

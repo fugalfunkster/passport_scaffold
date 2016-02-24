@@ -8,6 +8,10 @@ body {
     margin: 0 auto;
 }
 
+a {
+    text-decoration: none
+}
+
 input {
     border: solid gray 2px;
     font-size: 1.6em;
